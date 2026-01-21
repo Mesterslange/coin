@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b467jrvv4iqle"]
+
+[ext_resource type="PackedScene" uid="uid://y56qtfnbw138" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://dxsq18cq006im" path="res://Scenes/coin_mandeger.gd" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://df5cmmyxinl8r" path="res://Scenes/coin.tscn" id="3_wrm1d"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("1_ebmjs")]
+position = Vector2(23, -15)
+
+[node name="Coin maneger" type="Node2D" parent="."]
+script = ExtResource("2_qxrlw")
+coin_scene = ExtResource("3_wrm1d")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(23, -22)
+zoom = Vector2(4, 4)
